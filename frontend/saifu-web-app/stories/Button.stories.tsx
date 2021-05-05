@@ -1,17 +1,17 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import {Story, Meta} from '@storybook/react';
 
-import { Button, ButtonProps } from './Button';
+import {Button, ButtonProps} from '../components/atoms/button/Button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Saifu/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: {control: 'color'},
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
