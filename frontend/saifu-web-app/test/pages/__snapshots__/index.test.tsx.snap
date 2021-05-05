@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="jsx-1276654382 container"
+  >
+    <main
+      class="jsx-1276654382"
+    >
+      <div
+        class="jsx-1276654382 title"
+      >
+        <h1
+          class="jsx-1276654382"
+        >
+          SAIFU
+        </h1>
+      </div>
+      <a
+        class="jsx-1276654382"
+        href="/user/login"
+      >
+        ログイン
+      </a>
+      <a
+        class="jsx-1276654382"
+        href="/user/register"
+      >
+         新規登録
+      </a>
+    </main>
+    <footer
+      class="jsx-1276654382"
+    >
+      <a
+        class="jsx-1276654382"
+        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Powered by 
+        <img
+          alt="Vercel Logo"
+          class="jsx-1276654382"
+          height="32"
+          src="/vercel.svg"
+          width="64"
+        />
+      </a>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
