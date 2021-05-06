@@ -1,9 +1,7 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import Button, {
-  MaterialButtonProps as ButtonProps,
-} from '../components/atoms/button/Button';
+import {Button, ButtonProps} from '../components/atoms';
 
 export default {
   title: 'Saifu/Button',

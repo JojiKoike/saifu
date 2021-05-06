@@ -8,7 +8,7 @@ export const Home = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>
+    <header>
       <div className="title">
         <h1>SAIFU</h1>
       </div>
@@ -19,6 +19,18 @@ export const Home = (): JSX.Element => (
       <Link href="/user/register">
         <a> 新規登録</a>
       </Link>
+    </header>
+
+    <main>
+      <h2>Information</h2>
+      <ul>
+        <li>Info1</li>
+        <li>Info2</li>
+        <li>Info3</li>
+        <li>Info4</li>
+        <li>Info5</li>
+      </ul>
+      <div>pagination</div>
     </main>
 
     <footer>&copy; Saifu-mlm.com 2021</footer>
