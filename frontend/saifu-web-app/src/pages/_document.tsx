@@ -54,7 +54,6 @@ export default class CustomDocument extends NextDocument {
       <Html lang="ja-JP">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <title>SAIFU</title>
         </Head>
         <body>
           <Main />
