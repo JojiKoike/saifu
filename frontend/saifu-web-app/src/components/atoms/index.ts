@@ -4,3 +4,5 @@ export {default as LinkButton} from './button/LinkButton';
 export type {LinkButtonProps} from './button/LinkButton';
 export {default as Text} from './text/Text';
 export type {TextProps} from './text/Text';
+export {default as Heading} from './text/Heading';
+export type {HeadingProps} from './text/Heading';
