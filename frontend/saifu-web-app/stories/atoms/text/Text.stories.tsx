@@ -1,10 +1,10 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import {Text, TextProps} from '../../src/components/atoms';
+import {Text, TextProps} from '../../../src/components/atoms';
 
 export default {
-  title: 'Saifu/Atoms/Text',
+  title: 'Saifu/Atoms/Text/Text',
   component: Text,
 } as Meta;
 
