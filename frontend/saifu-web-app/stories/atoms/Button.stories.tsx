@@ -1,19 +1,20 @@
 import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
-import {Button, ButtonProps} from '../src/components/atoms';
+import {Button, ButtonProps} from '../../src/components/atoms';
 
 export default {
-  title: 'Saifu/Button',
+  title: 'Saifu/Atoms/Button',
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = args => (
+  <Button {...args}>ButtonTest</Button>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'contained',
-  label: 'Primary',
   color: 'primary',
   size: 'medium',
   onClick: () => alert('Primary'),

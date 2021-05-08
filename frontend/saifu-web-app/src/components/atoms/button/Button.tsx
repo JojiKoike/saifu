@@ -1,28 +1,40 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
+import {Button as MuiButton} from '@material-ui/core';
 
 export interface MaterialButtonProps {
-  label: string;
-  variant?: 'contained' | 'outlined';
-  color?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
-  onClick?: () => void;
+  children: React.ReactNode;
+  color?: 'default' | 'inherit' | 'primary' | 'secondary';
   disabled?: boolean;
+  endIcon?: React.ReactNode;
+  size?: 'small' | 'medium' | 'large';
+  startIcon?: React.ReactNode;
+  variant?: 'text' | 'contained' | 'outlined';
+  onClick?: () => void;
 }
 
-const MaterialButton = (props: MaterialButtonProps): JSX.Element => {
-  const {label, variant, color, size, onClick, disabled} = props;
+const Button = (props: MaterialButtonProps): JSX.Element => {
+  const {
+    children,
+    color = 'default',
+    disabled,
+    endIcon,
+    size = 'medium',
+    startIcon,
+    variant = 'text',
+    onClick,
+  } = props;
 
   return (
-    <Button
-      variant={variant}
+    <MuiButton
       color={color}
+      endIcon={endIcon}
       size={size}
+      startIcon={startIcon}
+      variant={variant}
       onClick={onClick}
       disabled={disabled}>
-      {label}
-    </Button>
+      {children}
+    </MuiButton>
   );
 };
 
-export default MaterialButton;
+export default Button;
