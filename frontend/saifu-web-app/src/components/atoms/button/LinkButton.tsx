@@ -17,7 +17,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
   const {
     href,
     children,
-    color = 'default',
+    color = 'inherit',
     variant = 'text',
     size = 'medium',
     disabled,
