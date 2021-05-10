@@ -6,3 +6,5 @@ export {default as Text} from './text/Text';
 export type {TextProps} from './text/Text';
 export {default as Heading} from './text/Heading';
 export type {HeadingProps} from './text/Heading';
+export {default as Pagination} from './pagination/Pagination';
+export type {PaginationProps} from './pagination/Pagination';
