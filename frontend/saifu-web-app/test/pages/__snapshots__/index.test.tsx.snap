@@ -2,52 +2,53 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="jsx-1276654382 container"
-  >
-    <main
-      class="jsx-1276654382"
-    >
+  <div>
+    <header>
       <div
-        class="jsx-1276654382 title"
+        class="title"
       >
-        <h1
-          class="jsx-1276654382"
-        >
+        <h1>
           SAIFU
         </h1>
       </div>
       <a
-        class="jsx-1276654382"
         href="/user/login"
       >
         ログイン
       </a>
       <a
-        class="jsx-1276654382"
         href="/user/register"
       >
          新規登録
       </a>
+    </header>
+    <main>
+      <h2>
+        Information
+      </h2>
+      <ul>
+        <li>
+          Info1
+        </li>
+        <li>
+          Info2
+        </li>
+        <li>
+          Info3
+        </li>
+        <li>
+          Info4
+        </li>
+        <li>
+          Info5
+        </li>
+      </ul>
+      <div>
+        pagination
+      </div>
     </main>
-    <footer
-      class="jsx-1276654382"
-    >
-      <a
-        class="jsx-1276654382"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by 
-        <img
-          alt="Vercel Logo"
-          class="jsx-1276654382"
-          height="32"
-          src="/vercel.svg"
-          width="64"
-        />
-      </a>
+    <footer>
+      © Saifu-mlm.com 2021
     </footer>
   </div>
 </DocumentFragment>
