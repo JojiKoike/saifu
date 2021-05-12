@@ -1,40 +1,61 @@
 import Head from 'next/head';
-import Link from 'next/link';
 
-export const Home = (): JSX.Element => (
-  <div>
-    <Head>
-      <title>SAIFU</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+import {APP_TITLE, APP_SUB_TITLE, LP_ARTICLES_TITLE} from '../constants/common';
+import {LOGIN, REGISTER} from '../constants/path';
+import {LandingPage} from '../components/templates';
+import {SimpleCardProps} from '../components/molecules';
 
-    <header>
-      <div className="title">
-        <h1>SAIFU</h1>
-      </div>
-      <Link href="/user/login">
-        <a>ログイン</a>
-      </Link>
+export const Home = (): JSX.Element => {
+  // Mockデータ
+  const articles: SimpleCardProps[] = [
+    {
+      image: 'profile.jpeg',
+      title: 'タイトル',
+      date: '2021/05/11',
+      content: 'タイトルどおりのコンテンツ',
+    },
+    {
+      image: 'profile.jpeg',
+      title: 'タイトル',
+      date: '2021/05/11',
+      content: 'タイトルどおりのコンテンツ',
+    },
+    {
+      image: 'profile.jpeg',
+      title: 'タイトル',
+      date: '2021/05/11',
+      content: 'タイトルどおりのコンテンツ',
+    },
+    {
+      image: 'profile.jpeg',
+      title: 'タイトル',
+      date: '2021/05/11',
+      content: 'タイトルどおりのコンテンツ',
+    },
+    {
+      image: 'profile.jpeg',
+      title: 'タイトル',
+      date: '2021/05/11',
+      content: 'タイトルどおりのコンテンツ',
+    },
+  ];
 
-      <Link href="/user/register">
-        <a> 新規登録</a>
-      </Link>
-    </header>
-
-    <main>
-      <h2>Information</h2>
-      <ul>
-        <li>Info1</li>
-        <li>Info2</li>
-        <li>Info3</li>
-        <li>Info4</li>
-        <li>Info5</li>
-      </ul>
-      <div>pagination</div>
-    </main>
-
-    <footer>&copy; Saifu-mlm.com 2021</footer>
-  </div>
-);
+  return (
+    <>
+      <Head>
+        <title>SAIFU</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <LandingPage
+        title={APP_TITLE}
+        subTitle={APP_SUB_TITLE}
+        loginUrl={LOGIN}
+        registerUrl={REGISTER}
+        articleListTitle={LP_ARTICLES_TITLE}
+        articles={articles}
+      />
+    </>
+  );
+};
 
 export default Home;

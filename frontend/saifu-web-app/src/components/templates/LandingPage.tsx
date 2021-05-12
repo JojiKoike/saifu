@@ -34,7 +34,7 @@ const LandingPage = (props: LandingPageProps): JSX.Element => {
         loginUrl={loginUrl}
         registerUrl={registerUrl}
       />
-      <Container maxWidth="xl">
+      <Container>
         <ArticleList title={articleListTitle} articles={articles} />
       </Container>
       <Footer />
