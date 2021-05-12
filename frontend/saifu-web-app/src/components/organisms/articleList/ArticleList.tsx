@@ -25,35 +25,44 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export interface ArticleListProps {
   title: string;
-  articles: SimpleCardProps[];
+  articles?: SimpleCardProps[];
 }
 
 const ArticleList = (props: ArticleListProps): JSX.Element => {
   const classes = useStyles();
   const {title, articles} = props;
 
-  return (
-    <div className={classes.root}>
-      <Heading variant="h4">{title}</Heading>
-      <div className={classes.contents}>
-        {articles.map((item, index) => {
-          return (
-            <div key={index} className={classes.content}>
-              <SimpleCard
-                image={item.image}
-                title={item.title}
-                date={item.date}
-                content={item.content}
-              />
-            </div>
-          );
-        })}
+  if (articles != undefined && articles.length > 0) {
+    return (
+      <div className={classes.root}>
+        <Heading variant="h4">{title}</Heading>
+        <div className={classes.contents}>
+          {articles.map((item, index) => {
+            return (
+              <div key={index} className={classes.content}>
+                <SimpleCard
+                  image={item.image}
+                  title={item.title}
+                  date={item.date}
+                  content={item.content}
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div className={classes.pagination}>
+          <Pagination count={articles.length} color="primary" />
+        </div>
       </div>
-      <div className={classes.pagination}>
-        <Pagination count={articles.length} color="primary" />
+    );
+  } else {
+    return (
+      <div className={classes.root}>
+        <Heading variant="h4">{title}</Heading>
+        <div className={classes.contents}>No Content.</div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default ArticleList;
