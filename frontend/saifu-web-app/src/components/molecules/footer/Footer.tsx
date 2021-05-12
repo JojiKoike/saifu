@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export interface FooterProps {
-  year: number;
-  author: string;
+  year?: number;
+  author?: string;
 }
 
 const Footer = (props: FooterProps): JSX.Element => {
