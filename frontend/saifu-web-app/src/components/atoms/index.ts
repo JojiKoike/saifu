@@ -8,3 +8,5 @@ export {default as Heading} from './text/Heading';
 export type {HeadingProps} from './text/Heading';
 export {default as Pagination} from './pagination/Pagination';
 export type {PaginationProps} from './pagination/Pagination';
+export {default as TextInputField} from './inputField/TextInputField';
+export type {TextInputFieldProps} from './inputField/TextInputField';
