@@ -12,3 +12,5 @@ export {default as TextInputField} from './inputField/TextInputField';
 export type {TextInputFieldProps} from './inputField/TextInputField';
 export {default as Checkbox} from './checkbox';
 export type {MuiCheckboxProps as CheckboxProps} from './checkbox';
+export {default as Radio} from './radiobutton';
+export type {MuiRadioProps as RadioProps} from './radiobutton';
