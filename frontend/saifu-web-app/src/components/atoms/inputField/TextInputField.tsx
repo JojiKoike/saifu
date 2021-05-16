@@ -12,6 +12,7 @@ export interface TextInputFieldProps {
   required?: boolean;
   autoFocus?: boolean;
   placeholder?: string;
+  helperText?: string;
   onChange?: () => void;
 }
 
