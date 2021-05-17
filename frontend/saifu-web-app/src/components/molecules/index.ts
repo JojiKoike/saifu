@@ -6,3 +6,5 @@ export {default as Footer} from './footer/Footer';
 export type {FooterProps} from './footer/Footer';
 export {default as Checkboxes} from './checkboxes';
 export type {CheckboxesProps} from './checkboxes';
+export {default as RadioButtons} from './radioButtons';
+export type {RadioButtonsProps} from './radioButtons';

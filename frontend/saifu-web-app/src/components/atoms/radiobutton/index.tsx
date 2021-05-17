@@ -9,13 +9,12 @@ export interface MuiRadioProps {
 }
 
 const MuiRadio = (props: MuiRadioProps): JSX.Element => {
-  const {value, label, labelPlacement = 'end', color = 'default'} = props;
+  const {labelPlacement = 'end', color = 'default'} = props;
   return (
     <FormControlLabel
-      value={value}
       control={<Radio color={color} />}
       labelPlacement={labelPlacement}
-      label={label}
+      {...props}
     />
   );
 };
