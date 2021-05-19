@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Button from '.';
 
 export interface LinkButtonProps {
+  className?: string;
   href: string;
   color?: 'default' | 'inherit' | 'primary' | 'secondary';
   disabled?: boolean;
@@ -13,24 +14,21 @@ export interface LinkButtonProps {
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({
-  href,
   color = 'inherit',
   variant = 'text',
   size = 'medium',
-  disabled,
-  endIcon,
-  startIcon,
   ...props
 }) => {
   return (
-    <Link href={href} passHref>
+    <Link href={props.href} passHref>
       <Button
+        className={props.className}
         color={color}
         variant={variant}
         size={size}
-        endIcon={endIcon}
-        startIcon={startIcon}
-        disabled={disabled}>
+        endIcon={props.endIcon}
+        startIcon={props.startIcon}
+        disabled={props.disabled}>
         {props.children}
       </Button>
     </Link>
