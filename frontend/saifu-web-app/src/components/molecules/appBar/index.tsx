@@ -26,9 +26,13 @@ export interface AppBarProps {
   registerUrl: string;
 }
 
-const ButtonAppBar = (props: AppBarProps): JSX.Element => {
+const ButtonAppBar: React.FC<AppBarProps> = ({
+  title,
+  subTitle,
+  loginUrl,
+  registerUrl,
+}) => {
   const classes = useStyles();
-  const {title, subTitle, loginUrl, registerUrl} = props;
 
   return (
     <div className={classes.root}>
