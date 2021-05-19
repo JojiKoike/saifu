@@ -8,8 +8,11 @@ export interface MuiRadioProps {
   color?: 'primary' | 'secondary' | 'default';
 }
 
-const MuiRadio = (props: MuiRadioProps): JSX.Element => {
-  const {labelPlacement = 'end', color = 'default'} = props;
+const MuiRadio: React.FC<MuiRadioProps> = ({
+  labelPlacement = 'end',
+  color = 'default',
+  ...props
+}) => {
   return (
     <FormControlLabel
       control={<Radio color={color} />}

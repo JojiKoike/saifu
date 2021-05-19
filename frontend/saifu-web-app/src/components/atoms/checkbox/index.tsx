@@ -9,8 +9,13 @@ export interface MuiCheckboxProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const MuiCheckbox = (props: MuiCheckboxProps): JSX.Element => {
-  const {name, label, color = 'default', checked, onChange} = props;
+const MuiCheckbox: React.FC<MuiCheckboxProps> = ({
+  name,
+  label,
+  color = 'default',
+  checked,
+  onChange,
+}) => {
   return (
     <FormControlLabel
       control={

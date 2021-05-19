@@ -12,18 +12,16 @@ export interface PaginationProps {
   showLastButton?: boolean;
 }
 
-const MuiPagination = (props: PaginationProps): JSX.Element => {
-  const {
-    count,
-    color = 'standard',
-    variant = 'text',
-    shape = 'rounded',
-    size = 'large',
-    disabled,
-    showFirstButton,
-    showLastButton,
-  } = props;
-
+const MuiPagination: React.FC<PaginationProps> = ({
+  count,
+  color = 'standard',
+  variant = 'text',
+  shape = 'rounded',
+  size = 'large',
+  disabled,
+  showFirstButton,
+  showLastButton,
+}) => {
   return (
     <Pagination
       count={count}

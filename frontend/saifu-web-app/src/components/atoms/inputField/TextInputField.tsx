@@ -13,19 +13,22 @@ export interface TextInputFieldProps {
   autoFocus?: boolean;
   placeholder?: string;
   helperText?: string;
-  onChange?: () => void;
+  disabled?: boolean;
+  error?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextInputField = (props: TextInputFieldProps): JSX.Element => {
-  const {
-    variant = 'standard',
-    type = 'text',
-    size = 'medium',
-    color = 'primary',
-    required = false,
-    autoFocus = false,
-  } = props;
-
+const TextInputField: React.FC<TextInputFieldProps> = ({
+  variant = 'standard',
+  type = 'text',
+  size = 'medium',
+  color = 'primary',
+  required = false,
+  autoFocus = false,
+  disabled = false,
+  error = false,
+  ...props
+}) => {
   return (
     <MuiTextField
       variant={variant}
@@ -34,6 +37,8 @@ const TextInputField = (props: TextInputFieldProps): JSX.Element => {
       color={color}
       required={required}
       autoFocus={autoFocus}
+      disabled={disabled}
+      error={error}
       {...props}
     />
   );
