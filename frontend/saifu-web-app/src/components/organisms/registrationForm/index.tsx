@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
 
-import {TextInputField, Button} from '../../atoms';
+import {HOME} from '../../../constants/path';
+import {TextInputField, Button, LinkButton} from '../../atoms';
 import {RadioButtons} from '../../molecules';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -135,13 +136,13 @@ export const RegistrationForm: React.FC = () => {
           variant="contained">
           キャンセル
         </Button>
-        <Button
+        <LinkButton
+          href={HOME}
           className={classes.button}
-          onClick={() => alert('登録')}
           color="primary"
           variant="contained">
           登録
-        </Button>
+        </LinkButton>
       </div>
     </div>
   );
