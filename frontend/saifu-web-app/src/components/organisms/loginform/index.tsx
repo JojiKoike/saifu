@@ -1,7 +1,8 @@
 import React from 'react';
 import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
 
-import {TextInputField, Button} from '../../atoms';
+import {HOME} from '../../../constants/path';
+import {TextInputField, Button, LinkButton} from '../../atoms';
 import {Checkboxes} from '../../molecules';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -37,7 +38,7 @@ export interface LoginFormProps {
 
 export const LoginForm = (props: LoginFormProps): JSX.Element => {
   const classes = useStyles();
-  const {onClickCancel, onClickLogin} = props;
+  const {onClickCancel} = props;
 
   return (
     <div className={classes.root}>
@@ -83,13 +84,13 @@ export const LoginForm = (props: LoginFormProps): JSX.Element => {
           variant="contained">
           キャンセル
         </Button>
-        <Button
+        <LinkButton
+          href={HOME}
           className={classes.button}
-          onClick={onClickLogin}
           color="primary"
           variant="contained">
           ログイン
-        </Button>
+        </LinkButton>
       </div>
     </div>
   );

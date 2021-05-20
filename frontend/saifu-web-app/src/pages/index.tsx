@@ -5,7 +5,7 @@ import {LOGIN, REGISTER} from '../constants/path';
 import {LandingPage} from '../components/templates';
 import {SimpleCardProps} from '../components/molecules';
 
-export const Home = (): JSX.Element => {
+export const Home: React.FC = () => {
   // Mockデータ
   const articles: SimpleCardProps[] = [
     {
