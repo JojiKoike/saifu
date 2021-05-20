@@ -3,8 +3,8 @@ import {Container} from '@material-ui/core';
 import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
 
 import {LinkButton} from '../atoms';
-import {AppBar, Footer, SimpleCardProps} from '../molecules';
-import {ArticleList} from '../organisms';
+import {AppBar, Footer} from '../molecules';
+import {LoginForm} from '../organisms';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -14,35 +14,21 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export interface LandingPageProps {
+export interface LoginPageProps {
   title: string;
   subTitle: string;
-  loginUrl: string;
   registerUrl: string;
-  articleListTitle: string;
-  articles?: SimpleCardProps[];
 }
 
-const LandingPage: React.FC<LandingPageProps> = ({
+const LoginPage: React.FC<LoginPageProps> = ({
   title,
   subTitle,
-  loginUrl,
   registerUrl,
-  articleListTitle,
-  articles,
 }) => {
   const classes = useStyles();
   return (
     <>
       <AppBar title={title} subTitle={subTitle}>
-        <LinkButton
-          className={classes.headerBarButton}
-          href={loginUrl}
-          size="large"
-          color="default"
-          variant="contained">
-          ログイン
-        </LinkButton>
         <LinkButton
           className={classes.headerBarButton}
           href={registerUrl}
@@ -53,11 +39,11 @@ const LandingPage: React.FC<LandingPageProps> = ({
         </LinkButton>
       </AppBar>
       <Container>
-        <ArticleList title={articleListTitle} articles={articles} />
+        <LoginForm />
       </Container>
       <Footer />
     </>
   );
 };
 
-export default LandingPage;
+export default LoginPage;

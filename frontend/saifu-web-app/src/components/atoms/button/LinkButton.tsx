@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '.';
 
 export interface LinkButtonProps {
+  className?: string;
   href: string;
-  children: React.ReactNode;
   color?: 'default' | 'inherit' | 'primary' | 'secondary';
   disabled?: boolean;
   endIcon?: React.ReactNode;
@@ -13,28 +13,23 @@ export interface LinkButtonProps {
   variant?: 'text' | 'contained' | 'outlined';
 }
 
-const LinkButton = (props: LinkButtonProps): JSX.Element => {
-  const {
-    href,
-    children,
-    color = 'inherit',
-    variant = 'text',
-    size = 'medium',
-    disabled,
-    endIcon,
-    startIcon,
-  } = props;
-
+const LinkButton: React.FC<LinkButtonProps> = ({
+  color = 'inherit',
+  variant = 'text',
+  size = 'medium',
+  ...props
+}) => {
   return (
-    <Link href={href} passHref>
+    <Link href={props.href} passHref>
       <Button
+        className={props.className}
         color={color}
         variant={variant}
         size={size}
-        endIcon={endIcon}
-        startIcon={startIcon}
-        disabled={disabled}>
-        {children}
+        endIcon={props.endIcon}
+        startIcon={props.startIcon}
+        disabled={props.disabled}>
+        {props.children}
       </Button>
     </Link>
   );

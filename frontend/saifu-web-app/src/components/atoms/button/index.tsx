@@ -1,8 +1,8 @@
 import React from 'react';
 import {Button as MuiButton} from '@material-ui/core';
 
-export interface MaterialButtonProps {
-  children: React.ReactNode;
+export interface MuiButtonProps {
+  className?: string;
   color?: 'default' | 'inherit' | 'primary' | 'secondary';
   disabled?: boolean;
   endIcon?: React.ReactNode;
@@ -12,20 +12,20 @@ export interface MaterialButtonProps {
   onClick?: () => void;
 }
 
-const Button = (props: MaterialButtonProps): JSX.Element => {
-  const {
-    children,
-    color = 'default',
-    disabled,
-    endIcon,
-    size = 'medium',
-    startIcon,
-    variant = 'text',
-    onClick,
-  } = props;
-
+const Button: React.FC<MuiButtonProps> = ({
+  className,
+  color = 'default',
+  disabled,
+  endIcon,
+  size = 'medium',
+  startIcon,
+  variant = 'text',
+  onClick,
+  ...props
+}) => {
   return (
     <MuiButton
+      className={className}
       color={color}
       endIcon={endIcon}
       size={size}
@@ -33,7 +33,7 @@ const Button = (props: MaterialButtonProps): JSX.Element => {
       variant={variant}
       onClick={onClick}
       disabled={disabled}>
-      {children}
+      {props.children}
     </MuiButton>
   );
 };

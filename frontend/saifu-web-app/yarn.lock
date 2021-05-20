@@ -1159,6 +1159,14 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@devexpress/dx-react-grid-material-ui@^2.7.5":
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-react-grid-material-ui/-/dx-react-grid-material-ui-2.7.5.tgz#428f2fd6d91237f2d0e4e6efa4728870e7e6e557"
+  integrity sha512-VRdoFaToid4HVMo0MWCtrUdDdyX24RM4qY1BLsSGRbwN3LOLFPqORg1NrVJQ/8f4fy1tfmsnz6SnY6pFSifkAg==
+  dependencies:
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -9813,6 +9821,11 @@ react-helmet-async@^1.0.7:
     prop-types "^15.7.2"
     react-fast-compare "^3.2.0"
     shallowequal "^1.1.0"
+
+react-hook-form@^7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.6.0.tgz#ec8aa8376738356c5af09992404292ba04067ac4"
+  integrity sha512-Ai3lx5TZO/W274PVgIqOkjhCAxQJ7KRU9c6tTM1M0LDctCUZ0LavirUiy+42b0gxGLUswO0vPsxcpw1CkkebUA==
 
 react-inspector@^5.1.0:
   version "5.1.1"

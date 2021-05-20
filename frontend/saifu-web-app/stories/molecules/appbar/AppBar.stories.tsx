@@ -14,6 +14,4 @@ export const Primary = Template.bind({});
 Primary.args = {
   title: 'SAIFU',
   subTitle: '-Personal Money Literacy Mentor-',
-  loginUrl: '/user/login',
-  registerUrl: '/user/register',
 };

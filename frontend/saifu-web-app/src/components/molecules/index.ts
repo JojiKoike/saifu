@@ -1,6 +1,10 @@
-export {default as SimpleCard} from './card/SimpleCard';
-export type {SimpleCardProps} from './card/SimpleCard';
-export {default as AppBar} from './appBar/AppBar';
-export type {AppBarProps} from './appBar/AppBar';
-export {default as Footer} from './footer/Footer';
-export type {FooterProps} from './footer/Footer';
+export {default as SimpleCard} from './card';
+export type {SimpleCardProps} from './card';
+export {default as AppBar} from './appBar';
+export type {AppBarProps} from './appBar';
+export {default as Footer} from './footer';
+export type {FooterProps} from './footer';
+export {default as Checkboxes} from './checkboxes';
+export type {CheckboxesProps} from './checkboxes';
+export {default as RadioButtons} from './radioButtons';
+export type {RadioButtonsProps} from './radioButtons';

@@ -1,0 +1,19 @@
+import React from 'react';
+import {Story, Meta} from '@storybook/react';
+
+import {Radio, RadioProps} from '../../../src/components/atoms';
+
+export default {
+  title: 'Saifu/Atoms/Radio/Radio',
+  component: Radio,
+} as Meta;
+
+const Template: Story<RadioProps> = args => <Radio {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  label: 'Test',
+  value: 'Test',
+  labelPlacement: 'end',
+  color: 'primary',
+};

@@ -2,7 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
 export interface TextProps {
-  children: React.ReactNode;
   align?: 'inherit' | 'left' | 'center' | 'right' | 'justify';
   color?:
     | 'initial'
@@ -18,18 +17,16 @@ export interface TextProps {
   variant?: 'body1' | 'body2';
 }
 
-const Text = (props: TextProps): JSX.Element => {
-  const {
-    children,
-    align = 'inherit',
-    color = 'initial',
-    display,
-    gutterBottom,
-    noWrap,
-    paragraph,
-    variant = 'body1',
-  } = props;
-
+const Text: React.FC<TextProps> = ({
+  align = 'inherit',
+  color = 'initial',
+  display,
+  gutterBottom,
+  noWrap,
+  paragraph,
+  variant = 'body1',
+  ...props
+}) => {
   return (
     <Typography
       align={align}
@@ -39,7 +36,7 @@ const Text = (props: TextProps): JSX.Element => {
       paragraph={paragraph}
       variant={variant}
       gutterBottom={gutterBottom}>
-      {children}
+      {props.children}
     </Typography>
   );
 };
