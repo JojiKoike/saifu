@@ -3,7 +3,7 @@ import {Container} from '@material-ui/core';
 import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
 
 import {LinkButton} from '../atoms';
-import {AppBar, Footer, SimpleCardProps} from '../molecules';
+import {AppBar, Footer} from '../molecules';
 import {LoginForm} from '../organisms';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -17,10 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export interface LoginPageProps {
   title: string;
   subTitle: string;
-  loginUrl: string;
   registerUrl: string;
-  articleListTitle: string;
-  articles?: SimpleCardProps[];
 }
 
 const LoginPage: React.FC<LoginPageProps> = ({
