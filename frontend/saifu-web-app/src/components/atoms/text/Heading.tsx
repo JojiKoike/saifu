@@ -13,6 +13,7 @@ export interface HeadingProps {
   display?: 'block' | 'inline';
   gutterBottom?: boolean;
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2';
+  className?: string;
 }
 
 const Heading: React.FC<HeadingProps> = ({
@@ -25,6 +26,7 @@ const Heading: React.FC<HeadingProps> = ({
 }) => {
   return (
     <Typography
+      className={props.className}
       align={align}
       color={color}
       display={display}
