@@ -6,9 +6,6 @@ import {Heading} from '../../atoms';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
-    },
     title: {
       display: 'flex',
       flexGrow: 1,
@@ -28,8 +25,8 @@ const ButtonAppBar: React.FC<AppBarProps> = ({title, subTitle, ...props}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <>
+      <AppBar>
         <Toolbar>
           <div className={classes.title}>
             <Heading variant="h5">{title}</Heading>
@@ -40,7 +37,8 @@ const ButtonAppBar: React.FC<AppBarProps> = ({title, subTitle, ...props}) => {
           {props.children}
         </Toolbar>
       </AppBar>
-    </div>
+      <Toolbar />
+    </>
   );
 };
 
