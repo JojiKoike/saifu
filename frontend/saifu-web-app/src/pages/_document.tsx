@@ -8,10 +8,7 @@ import NextDocument, {
   NextScript,
 } from 'next/document';
 import {RenderPageResult} from 'next/dist/next-server/lib/utils';
-import {
-  ServerStyleSheet,
-  ServerStyleSheet as StyledComponentSheets,
-} from 'styled-components';
+import {ServerStyleSheet as StyledComponentSheets} from 'styled-components';
 import {ServerStyleSheets as MaterialUiServerStyleSheets} from '@material-ui/core';
 
 export default class CustomDocument extends NextDocument {
@@ -27,7 +24,7 @@ export default class CustomDocument extends NextDocument {
         originalRenderPage({
           enhanceApp: App => (
             props,
-          ): React.ReactElement<{sheet: ServerStyleSheet}> =>
+          ): React.ReactElement<{sheet: StyledComponentSheets}> =>
             styledComponentsSheet.collectStyles(
               materialUiSheets.collect(<App {...props} />),
             ),
