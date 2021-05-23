@@ -8,3 +8,5 @@ export {default as Checkboxes} from './checkboxes';
 export type {CheckboxesProps} from './checkboxes';
 export {default as RadioButtons} from './radioButtons';
 export type {RadioButtonsProps} from './radioButtons';
+export {default as DashboardCard} from './card/DashboardCard';
+export type {DashboardCardProps} from './card/DashboardCard';
