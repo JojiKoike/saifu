@@ -1,12 +1,11 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider, StylesProvider } from '@material-ui/core/styles';
+import {MuiThemeProvider, StylesProvider} from '@material-ui/core/styles';
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import {ThemeProvider} from 'styled-components';
 import theme from '../src/styles/theme';
 
-
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  actions: {argTypesRegex: '^on[A-Z].*'},
 };
 
 const withThemeProvider = (Story, context) => {
@@ -19,7 +18,7 @@ const withThemeProvider = (Story, context) => {
         </ThemeProvider>
       </MuiThemeProvider>
     </StylesProvider>
-  )
-}
+  );
+};
 
-export const decorators = [withThemeProvider]
+export const decorators = [withThemeProvider];
