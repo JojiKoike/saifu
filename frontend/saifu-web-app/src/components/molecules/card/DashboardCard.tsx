@@ -17,9 +17,19 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       padding: theme.spacing(1),
     },
-    cover: {
+    main_cover: {
       width: 120,
       height: 120,
+    },
+    sub: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: theme.spacing(1),
+    },
+    sub_cover: {
+      width: 60,
+      height: 60,
     },
     contentContainer: {
       display: 'flex',
@@ -29,50 +39,91 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export interface DashboardCardProps {
+interface SubContentProps {
   title: string;
   content: string;
   leftImg?: string;
   leftImgTitle?: string;
   rightImg?: string;
   rightImgTitle?: string;
-  subContent?: string;
+}
+
+export interface DashboardCardProps {
+  mainTitle: string;
+  mainContent: string;
+  mainPreviousContent: string;
+  leftImg: string;
+  leftImgTitle: string;
+  rightImg: string;
+  rightImgTitle: string;
+  subContentProps?: SubContentProps[];
 }
 
 const DashboardCard: React.FC<DashboardCardProps> = ({
-  title,
-  content,
+  mainTitle,
+  mainContent,
+  mainPreviousContent,
   leftImg,
   leftImgTitle,
   rightImg,
   rightImgTitle,
-  subContent,
+  subContentProps,
 }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
+        {subContentProps?.map((subContentProp, index) => {
+          return (
+            <div key={index} className={classes.main}>
+              {subContentProp.leftImg !== undefined ? (
+                <CardMedia
+                  className={classes.sub_cover}
+                  component="img"
+                  image={leftImg}
+                  title={leftImgTitle}
+                />
+              ) : null}
+              <CardContent className={classes.contentContainer}>
+                <Heading variant="h5" align="center">
+                  {subContentProp.title}
+                </Heading>
+                <Heading variant="h5" align="center">
+                  {subContentProp.content}
+                </Heading>
+              </CardContent>
+              {subContentProp.rightImg !== undefined ? (
+                <CardMedia
+                  className={classes.sub_cover}
+                  component="img"
+                  image={rightImg}
+                  title={rightImgTitle}
+                />
+              ) : null}
+            </div>
+          );
+        })}
         <div className={classes.main}>
           <CardMedia
-            className={classes.cover}
+            className={classes.main_cover}
             component="img"
             image={leftImg}
             title={leftImgTitle}
           />
           <CardContent className={classes.contentContainer}>
             <Heading variant="h4" align="center">
-              {title}
+              {mainTitle}
             </Heading>
             <Heading variant="h4" align="center">
-              {content}
+              {mainContent}
             </Heading>
             <Heading variant="h6" align="center">
-              {subContent}
+              {mainPreviousContent}
             </Heading>
           </CardContent>
           <CardMedia
-            className={classes.cover}
+            className={classes.main_cover}
             component="img"
             image={rightImg}
             title={rightImgTitle}
