@@ -2,6 +2,7 @@ import React from 'react';
 import {Story, Meta} from '@storybook/react';
 
 import {SideBySideBar, SideBySideBarProps} from '../../../src/components/atoms';
+import {TargetData} from '@devexpress/dx-react-chart';
 
 export default {
   title: 'Saifu/Atoms/Chart/SideBySideBar',
@@ -21,6 +22,9 @@ IncomeVsExpense.args = {
   rightBarSeriesName: 'expense',
   rightBarSeriesColor: 'red',
   rightValueField: 'expense',
+  onClick: (target: TargetData) => {
+    alert(target.targets[0].series);
+  },
   data: [
     {
       yearMonth: '2020/12',

@@ -8,7 +8,13 @@ import {
   Legend,
 } from '@devexpress/dx-react-chart-material-ui';
 import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
-import {Stack, Animation} from '@devexpress/dx-react-chart';
+import {
+  Stack,
+  Animation,
+  EventTracker,
+  HoverState,
+  TargetData,
+} from '@devexpress/dx-react-chart';
 
 const legendStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -50,6 +56,7 @@ export interface SideBySideBarProps {
   rightBarSeriesName: string;
   rightBarSeriesColor: string;
   rightValueField: string;
+  onClick?: (target: TargetData) => void;
   data: any;
 }
 
@@ -81,6 +88,8 @@ const SideBySideBar: React.FC<SideBySideBarProps> = ({...props}) => {
       />
       {props.title != undefined ? <Title text={props.title} /> : null}
       <Stack />
+      <EventTracker onClick={props.onClick} />
+      <HoverState />
     </Chart>
   );
 };
