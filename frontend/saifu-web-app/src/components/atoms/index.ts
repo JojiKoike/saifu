@@ -14,3 +14,5 @@ export {default as Checkbox} from './checkbox';
 export type {MuiCheckboxProps as CheckboxProps} from './checkbox';
 export {default as Radio} from './radiobutton';
 export type {MuiRadioProps as RadioProps} from './radiobutton';
+export {default as SideBySideBar} from './charts/SideBySideBars';
+export type {SideBySideBarProps} from './charts/SideBySideBars';
