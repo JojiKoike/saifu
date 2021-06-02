@@ -9,13 +9,14 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
       flexDirection: 'column',
-      width: 'fit-content',
+      width: 480,
+      padding: theme.spacing(1),
+      margin: theme.spacing(1),
     },
     main: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: theme.spacing(1),
     },
     main_cover: {
       width: 120,
@@ -25,7 +26,6 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: theme.spacing(1),
     },
     sub_cover: {
       width: 60,
@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      padding: theme.spacing(1),
     },
   }),
 );

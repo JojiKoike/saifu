@@ -9,9 +9,8 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
       flexDirection: 'column',
-      width: 300,
-      height: 300,
-      padding: theme.spacing(1),
+      width: 280,
+      height: 280,
       borderRadius: '50%',
     },
     cover: {

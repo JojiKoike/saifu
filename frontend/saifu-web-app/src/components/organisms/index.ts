@@ -5,3 +5,5 @@ export type {LoginFormProps} from './loginform';
 export {default as RegistrationForm} from './registrationForm';
 export {default as HeaderBar} from './headerBar';
 export type {HeaderBarProps} from './headerBar/index';
+export {default as HomeDashboard} from './homedashboard';
+export type {HomeDashboardProps} from './homedashboard';
